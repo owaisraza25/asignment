@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>5.Create a web page with a button that, when clicked, displays a random quote from a list of quotes.</h1>
+  <h1>Random Quote</h1>
+<div class="quote-container">
+  <p class="quote-text" id="quoteText"></p>
+ 
+</div>
+<button class="quote-button" id="quoteButton">Show Quote</button>
+
+<style>
+  body {
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .quote-container {
+    margin-bottom: 20px;
+  }
+
+  .quote-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .quote-author {
+    font-size: 18px;
+  }
+
+  .quote-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+</style>
+
+<script>
+  var quotes = [
+    { text: "ہے کلامِ الٰہی میں شَمس و ضُحٰے ترے چہرئہ نور فزا کی قسم " },
+    { text: "تِرے خُلْق کو حق نے عظیم کہا تِری خِلْق کو حق نے جمیل کیا" },
+    { text: "وہ خدا نے ہے مرتبہ تجھ کو دیا نہ کسِی کو ملے نہ کسی کو ملا" },
+    { text: "ترا مسندِ ناز ہے عرشِ بریں تِرا محرم راز ہے روحِ امیں" },
+    { text: "کوئی تجھ سا ہوا ہے نہ ہو گا شہا ترے خالقِ حُسن و ادا کی قسم" },
+    { text: "کعبہ کے بَدرالدُّجی تم پہ کروروں درود، طیبہ کے شمس الضحی  تم  پہ کروروں درود" }
+  ];
+
+  var quoteButton = document.getElementById("quoteButton");
+  var quoteText = document.getElementById("quoteText");
+  
+
+  quoteButton.addEventListener("click", function() {
+    var randomIndex = Math.floor(Math.random() * quotes.length);
+    var randomQuote = quotes[randomIndex];
+    quoteText.textContent = randomQuote.text;
+   
+  });
+</script>
+</body>
+</html>

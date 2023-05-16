@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Date and Time</title>
+ 
+</head>
+<body>
+    <h1>7.Create a web page with a button that, when clicked, displays the current date and time in an alert box.</h1>
+  <h1>Current Date and Time</h1>
+  <button class="date-button" id="dateButton">Show Date and Time</button>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .date-button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+
+  <script>
+    var btn = document.getElementById("dateButton")
+    btn.addEventListener("click", DateAndTime)
+
+    function DateAndTime(){
+
+        var TodayDate = new Date();
+        alert("Today in : " + TodayDate)
+    }
+  </script>
+
+
+
+
+
+</body>
+</html>

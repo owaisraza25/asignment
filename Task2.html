@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    
+<h1>
+    2.Create a web page with two buttons. When the first button is clicked, change the background color of the page to blue. When the second button is clicked, change the background color of the page to red.
+</h1>
+
+<br> <br>
+
+    <button id="btn_1"> Blue </button>
+    <button id="btn_2"> Red </button>
+
+    <style>
+
+body {
+      text-align: center;
+      padding-top: 50px;
+      background-color: white;
+    }
+
+#btn_1,#btn_2 {
+    height: 50px;
+    width: 100px;
+    font-size: 28px;
+    border-radius: 10px;
+}
+
+    </style>
+
+    
+    <script>
+
+var btn_1 = document.getElementById("btn_1")
+var btn_2 = document.getElementById("btn_2")
+
+
+btn_1.addEventListener("click", chang_clr_blue)
+btn_2.addEventListener("click", chang_clr_red)
+
+
+function chang_clr_blue(){
+
+    document.body.style.backgroundColor = "blue"
+
+ }
+
+ function chang_clr_red(){
+
+    document.body.style.backgroundColor = "red"
+
+ }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
